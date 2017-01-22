@@ -5,12 +5,12 @@ title: Matar Haller | Projects
 
 <div class="container">
 
-    <script type="text/javascript" src="
-        ../data/tri0253_8k_short_500ms_nooverlap_norotation_3PCs_keepMFCC0_smooth.js"></script>
-
     <div class="page-header">
         <h1>Automatic Speech Segmentation</h1>
     </div>
+
+    <script type="text/javascript" src="
+        ../data/tri0253_8k_short_500ms_nooverlap_norotation_3PCs_keepMFCC0_smooth.js"></script>
 
     <audio controls id="audio_player">
             <source src="../data/tri0253_8k_short.wav" type="audio/ogg">
@@ -38,10 +38,10 @@ title: Matar Haller | Projects
             console.log(current_speaker_name);
             switch(current_speaker_name){
                 case "0":
-                    $("#speaker").html("<h1>speaker: "+"<span style='color:#e7298a'>A</span>"+"</h1>");
+                    $("#speaker").html("<h3>speaker: "+"<span style='color:#e7298a'>A</span>"+"</h3>");
                     break;
                 case "1":
-                    $("#speaker").html("<h1>speaker: "+"<span style='color:#66a61e'>B</span>"+"</h1>");
+                    $("#speaker").html("<h3>speaker: "+"<span style='color:#66a61e'>B</span>"+"</h3>");
                     break;
             }
         }, 100);

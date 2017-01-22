@@ -1,48 +1,52 @@
 ---
 layout: default
-title: insight project
+title: Matar Haller | Projects
 ---
+
 <div class="container">
 
-<script type="text/javascript" src="
+    <script type="text/javascript" src="
         ../data/tri0253_8k_short_500ms_nooverlap_norotation_3PCs_keepMFCC0_smooth.js"></script>
 
-    <h1>automatic speaker segmentation</h1>
+    <div class="page-header">
+        <h1>Automatic Speech Segmentation</h1>
+    </div>
+
     <audio controls id="audio_player">
             <source src="../data/tri0253_8k_short.wav" type="audio/ogg">
             Your browser does not support the audio element.
-            </audio>
+    </audio>
 
-            <div id="speaker"><h1>speaker goes here</h1></div>
-            <div id="display">time goes here</div>
+    <div id="speaker"><h1>speaker goes here</h1></div>
+    <div id="display">time goes here</div>
 
-            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-            <script>
-                console.log("this");
-                console.log(theJson);
-                function sleepFor( sleepDuration ){
-                    var now = new Date().getTime();
-                    while(new Date().getTime() < now + sleepDuration){ /* do nothing */ }
-                }
-                var audio_player = document.getElementById("audio_player");
-                console.log(audio_player.currentTime);
-                var intervalID = setInterval(function(){
-                    var now = new Date().getTime();
-                    // console.log("Interval reached");
-                    $("#display").html("time: "+audio_player.currentTime);
-                    var current_speaker_name = theJson[Math.round(audio_player.currentTime*1000/500)];
-                    console.log(current_speaker_name);
-                    switch(current_speaker_name){
-                        case "0":
-                            $("#speaker").html("<h1>speaker: "+"<span style='color:#e7298a'>A</span>"+"</h1>");
-                            break;
-                        case "1":
-                            $("#speaker").html("<h1>speaker: "+"<span style='color:#66a61e'>B</span>"+"</h1>");
-                            break;
-                    }
-                }, 100);
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        console.log("this");
+        console.log(theJson);
+        function sleepFor( sleepDuration ){
+            var now = new Date().getTime();
+            while(new Date().getTime() < now + sleepDuration){ /* do nothing */ }
+        }
+        var audio_player = document.getElementById("audio_player");
+        console.log(audio_player.currentTime);
+        var intervalID = setInterval(function(){
+            var now = new Date().getTime();
+            // console.log("Interval reached");
+            $("#display").html("time: "+audio_player.currentTime);
+            var current_speaker_name = theJson[Math.round(audio_player.currentTime*1000/500)];
+            console.log(current_speaker_name);
+            switch(current_speaker_name){
+                case "0":
+                    $("#speaker").html("<h1>speaker: "+"<span style='color:#e7298a'>A</span>"+"</h1>");
+                    break;
+                case "1":
+                    $("#speaker").html("<h1>speaker: "+"<span style='color:#66a61e'>B</span>"+"</h1>");
+                    break;
+            }
+        }, 100);
 
-</script>
+    </script>
 
 </div><!-- /.container-->
 

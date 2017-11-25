@@ -6,51 +6,26 @@ title: Matar Haller | Projects
 <div class="container">
 
     <div class="page-header">
-        <h1>Automatic Speech Segmentation</h1>
+      <h1>Projects</h1>
     </div>
+    <p>
 
-    <script type="text/javascript" src="
-        ../data/tri0253_8k_short_500ms_nooverlap_norotation_3PCs_keepMFCC0_smooth.js"></script>
+    <h5>Automatic Speaker Segmentation</h5>
+    <ul>
+      <li><a href="https://docs.google.com/presentation/d/16-KzniBW2Ryc8Pl2EgLA5kAGwUDvNdLIeToqsErgQUE/pub?start=false&loop=false&delayms=600000">slides</a></li>
+      <li><a href="insight.html">demo</a></li>
+      <li><a href="https://conferences.oreilly.com/strata/strata-ca/public/schedule/speaker/257592">talk</a><li>
+    </ul>
 
-    <audio controls id="audio_player">
-            <source src="../data/tri0253_8k_short.wav" type="audio/ogg">
-            Your browser does not support the audio element.
-    </audio>
-
-    <div id="speaker"><h1>speaker goes here</h1></div>
-    <div id="display">time goes here</div>
-
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script>
-        console.log("this");
-        console.log(theJson);
-        function sleepFor( sleepDuration ){
-            var now = new Date().getTime();
-            while(new Date().getTime() < now + sleepDuration){ /* do nothing */ }
-        }
-        var audio_player = document.getElementById("audio_player");
-        console.log(audio_player.currentTime);
-        var intervalID = setInterval(function(){
-            var now = new Date().getTime();
-            // console.log("Interval reached");
-            $("#display").html("time: "+audio_player.currentTime);
-            var current_speaker_name = theJson[Math.round(audio_player.currentTime*1000/500)];
-            console.log(current_speaker_name);
-            switch(current_speaker_name){
-                case "0":
-                    $("#speaker").html("<h3>speaker: "+"<span style='color:#e7298a'>A</span>"+"</h3>");
-                    break;
-                case "1":
-                    $("#speaker").html("<h3>speaker: "+"<span style='color:#66a61e'>B</span>"+"</h3>");
-                    break;
-            }
-        }, 100);
-
-    </script>
-    
-    <p class="text-muted">
-        <a href="https://docs.google.com/presentation/d/16-KzniBW2Ryc8Pl2EgLA5kAGwUDvNdLIeToqsErgQUE/pub?start=false&loop=false&delayms=600000">slides</a>
+     <h5>Tell Me Something I Don't Know: Analyzing OkCupid Profiles</h5>
+    <ul>
+      <li><a href="http://conference.scipy.org/proceedings/scipy2016/juan_shishido.html">abstract</a><li>
+      <li><a href="http://conference.scipy.org/proceedings/scipy2016/pdfs/juan_shishido.pdf">paper</a></li>
+      <li><a
+          href="http://pyvideo.org/scipy-2016/tell-me-something-i-dont-know-analyzing-okcupid-profiles-scipy-2016-matar-haller-juan-shishid.html">talk</a></li>
+    </ul>
     </p>
-    
-</div><!-- /.container-->
+
+
+</div>
 
